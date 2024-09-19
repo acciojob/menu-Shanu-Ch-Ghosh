@@ -88,7 +88,7 @@ const App = () => {
           setfilterData(mainData)
         }} style={{ margin: "6px" }}>ALL</button>
 
-        <button id="filter-btn-1" onClick={()=>{
+        <button data-test-id="menu-item-breakfast" onClick={()=>{
           const newArr = myData.filter((item)=>{
             return item.category === "breakfast"
           })
@@ -97,7 +97,7 @@ const App = () => {
 
         }} style={{ margin: "6px" }}>Breakfirst</button>
 
-        <button id="filter-btn-2" onClick={()=>{
+        <button data-test-id="menu-item-lunch" onClick={()=>{
            const newArr = myData.filter((item)=>{
             return item.category === "lunch"
           })
@@ -105,7 +105,7 @@ const App = () => {
           setfilterData(newArr);
         }} style={{ margin: "6px" }}>Lunch</button>
 
-        <button id="filter-btn-3"  onClick={()=>{
+        <button data-test-id="menu-item-shakes"  onClick={()=>{
            const newArr = myData.filter((item)=>{
             return item.category === "shakes"
           })
