@@ -80,7 +80,7 @@ const App = () => {
   const [filterData, setfilterData] = useState(mainData);
 
   return (
-    <div style={{ textAlign: "center" }}>
+    <div id="main" style={{ textAlign: "center" }}>
       <h1>Our Menu</h1>
       <div style={{ margin: "6px" }}>
         <button 
@@ -88,7 +88,7 @@ const App = () => {
           setfilterData(mainData)
         }} style={{ margin: "6px" }}>ALL</button>
 
-        <button onClick={()=>{
+        <button id="filter-btn-1" onClick={()=>{
           const newArr = myData.filter((item)=>{
             return item.category === "breakfast"
           })
@@ -97,7 +97,7 @@ const App = () => {
 
         }} style={{ margin: "6px" }}>Breakfirst</button>
 
-        <button onClick={()=>{
+        <button id="filter-btn-2" onClick={()=>{
            const newArr = myData.filter((item)=>{
             return item.category === "lunch"
           })
@@ -105,7 +105,7 @@ const App = () => {
           setfilterData(newArr);
         }} style={{ margin: "6px" }}>Lunch</button>
 
-        <button onClick={()=>{
+        <button id="filter-btn-3"  onClick={()=>{
            const newArr = myData.filter((item)=>{
             return item.category === "shakes"
           })
